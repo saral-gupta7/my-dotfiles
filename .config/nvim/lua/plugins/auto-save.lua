@@ -7,6 +7,5 @@ return {
     -- your config goes here
     -- or just leave it empty :)
     -- just to check
-    -- another check
   },
 }
