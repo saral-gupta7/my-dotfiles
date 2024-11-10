@@ -1,29 +1,19 @@
 
-
 [env]
-term = 'xterm-color'
+TERM = "xterm-256color"
 
 [window]
 padding.x = 10
 padding.y = 10
-dimensions = { columns = 110, lines = 35 }
-decorations = "buttonless"
 
-
-position = { x = 370, y = 180 }
-
-blur = true
+decorations = "Buttonless"
 
 opacity = 0.85
-option_as_alt = 'both'
+blur = true
 
+option_as_alt = "Both"
 
 [font]
-
-normal.family = 'MesloLGS Nerd Font Mono'
-
+normal.family = "MesloLGS Nerd Font Mono"
 
 size = 17
-
-[general]
-import = ["~/.config/alacritty/themes/themes/tokyo-night.toml"]
