@@ -128,7 +128,7 @@ alias cd="z"
 alias ls="eza --icons=always"
 alias t="tmux"
 alias cat="bat"
-# alias a='asciiquarium'
+alias a='asciiquarium'
 alias pip='pip3'
 alias c='clear'
 alias ff='fastfetch'
