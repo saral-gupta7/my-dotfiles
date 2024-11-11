@@ -5,7 +5,7 @@ return {
   },
   config = function()
     local null_ls = require("null-ls")
-
+    -- added a commment
     null_ls.setup({
       sources = {
 
