@@ -133,6 +133,7 @@ alias pip='pip3'
 alias c='clear'
 alias ff='fastfetch'
 alias y='yazi'
+alias fl='vim flake.nix'
 eval "$(zoxide init zsh)"
 eval "$(thefuck --alias)"
 
