@@ -1,10 +1,12 @@
-# Amazon Q pre block. Keep at the top of this file.
-[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh"
-set -o vi
+# Amazon Q pre block. Keep at the top of this file. [[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh" set -o vi
 
 bindkey -M viins 'jk' vi-cmd-mode
 
+export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:$GOPATH/bin
 
+export EDITOR="nvim"
+export VISUAL="nvim"
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 #
@@ -134,6 +136,10 @@ alias c='clear'
 alias ff='fastfetch'
 alias y='yazi'
 alias fl='vim flake.nix'
+alias yt="yt-dlp"
+
+
+
 eval "$(zoxide init zsh)"
 eval "$(thefuck --alias)"
 
