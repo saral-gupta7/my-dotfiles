@@ -137,6 +137,7 @@ alias ff='fastfetch'
 alias y='yazi'
 alias fl='vim flake.nix'
 alias yt="yt-dlp"
+alias lz='lazygit'
 
 
 
