@@ -1,7 +1,7 @@
 # Amazon Q pre block. Keep at the top of this file. [[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh" set -o vi
 
+set -o vi
 bindkey -M viins 'jk' vi-cmd-mode
-
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$GOPATH/bin
 
@@ -138,7 +138,6 @@ alias y='yazi'
 alias fl='vim flake.nix'
 alias yt="yt-dlp"
 alias lz='lazygit'
-
 
 
 eval "$(zoxide init zsh)"
