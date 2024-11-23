@@ -1,4 +1,0 @@
-
-[ui.thumbnail]
-max_width = 120    # Default might be 80; increase to make thumbnails wider
-max_height = 120   # Default might be 40; increase to make thumbnails taller

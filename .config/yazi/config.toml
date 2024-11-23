@@ -1,0 +1,8 @@
+[preview]
+enable = true
+width = 120   # Set a larger width for the preview pane
+height = 80    # Set a larger height for the preview pane
+
+[preview.commands]
+image = ["ueberzug-layer"]  # Use ueberzug for rendering images
+
