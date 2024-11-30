@@ -142,8 +142,8 @@ alias lz='lazygit'
 alias dt='cd ~/Desktop'
 alias zsh='vim ~/dotfiles/.zshrc'
 alias dot='cd ~/dotfiles'
-
-
+alias inf='vim ~/Desktop/learn/terminal/info.md'
+alias s='source ~/.zshrc'
 
 
 
