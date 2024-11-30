@@ -141,7 +141,7 @@ alias yt="yt-dlp"
 alias lz='lazygit'
 alias dt='cd ~/Desktop'
 alias zsh='vim ~/dotfiles/.zshrc'
-
+alias dot='cd ~/dotfiles'
 
 
 
