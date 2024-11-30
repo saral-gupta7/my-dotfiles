@@ -121,16 +121,17 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
+
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # alias vim = "nvim"
+
+# My Aliases
 alias vim="nvim"
 alias python="python3"
 alias cd="z"
 alias ls="eza --icons=always"
 alias t="tmux"
 alias cat="bat"
-alias a='asciiquarium'
 alias pip='pip3'
 alias c='clear'
 alias ff='fastfetch'
@@ -138,6 +139,14 @@ alias y='yazi'
 alias fl='vim flake.nix'
 alias yt="yt-dlp"
 alias lz='lazygit'
+alias dt='cd ~/Desktop'
+alias zsh='vim ~/dotfiles/.zshrc'
+
+
+
+
+
+
 
 
 eval "$(zoxide init zsh)"
