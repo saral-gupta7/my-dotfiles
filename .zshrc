@@ -147,6 +147,9 @@ alias s='source ~/.zshrc'
 alias i='instaloader'
 alias lf='cd ~/Desktop/lf'
 alias sub='cd ~/Desktop/lf/subjects'
+alias cs='y ~/Desktop/lf/subjects/CS'
+alias dar='cd ~/.config/nix-darwin'
+
 
 
 
