@@ -136,7 +136,7 @@ alias pip='pip3'
 alias c='clear'
 alias ff='fastfetch'
 alias y='yazi'
-alias fl='vim flake.nix'
+alias fl='vim ~/.config/nix-darwin/flake.nix'
 alias yt="yt-dlp"
 alias lz='lazygit'
 alias dt='cd ~/Desktop'
@@ -149,6 +149,7 @@ alias lf='cd ~/Desktop/lf'
 alias sub='cd ~/Desktop/lf/subjects'
 alias cs='y ~/Desktop/lf/subjects/CS'
 alias dar='cd ~/.config/nix-darwin'
+alias th='vim ~/Desktop/lf/things_to_do.md'
 
 
 
