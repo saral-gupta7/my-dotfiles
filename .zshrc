@@ -150,6 +150,7 @@ alias sub='cd ~/Desktop/lf/subjects'
 alias cs='y ~/Desktop/lf/subjects/CS'
 alias dar='cd ~/.config/nix-darwin'
 alias th='vim ~/Desktop/lf/things_to_do.md'
+alias apt='vim ~/Desktop/lf/subjects/Aptitude/progess.md'
 
 
 
