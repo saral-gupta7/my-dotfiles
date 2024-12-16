@@ -136,7 +136,6 @@ alias pip='pip3'
 alias c='clear'
 alias ff='fastfetch'
 alias y='yazi'
-alias fl='vim ~/.config/nix-darwin/flake.nix'
 alias yt="yt-dlp"
 alias lz='lazygit'
 alias dt='cd ~/Desktop'
@@ -148,13 +147,16 @@ alias i='instaloader'
 alias lf='cd ~/Desktop/lf'
 alias sub='cd ~/Desktop/lf/subjects'
 alias cs='y ~/Desktop/lf/subjects/CS'
-alias dar='cd ~/.config/nix-darwin'
 alias th='vim ~/Desktop/lf/things_to_do.md'
 alias apt='vim ~/Desktop/lf/subjects/Aptitude/progess.md'
 
+# nix aliases
+alias fl='vim ~/.config/nix-darwin/flake.nix'
+alias dar='cd ~/.config/nix-darwin'
+alias bld='darwin-rebuild switch --flake ~/.config/nix-darwin#anyaforger'
 
-
-
+alias phr='vim ~/Desktop/lf/language/english/phrase.md'
+alias nv='cd ~/dotfiles/.config/nvim && vim ~/dotfiles/.config/nvim'
 
 
 eval "$(zoxide init zsh)"
@@ -222,7 +224,6 @@ PATH=~/.console-ninja/.bin:$PATH
 POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
 
 
-nerdfetch
 
 # Amazon Q post block. Keep at the bottom of this file.
 [[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"
