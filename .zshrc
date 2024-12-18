@@ -157,7 +157,7 @@ alias bld='darwin-rebuild switch --flake ~/.config/nix-darwin#anyaforger'
 
 alias phr='vim ~/Desktop/lf/language/english/phrase.md'
 alias nv='cd ~/dotfiles/.config/nvim && vim ~/dotfiles/.config/nvim'
-
+alias e='exit'
 
 eval "$(zoxide init zsh)"
 eval "$(thefuck --alias)"
