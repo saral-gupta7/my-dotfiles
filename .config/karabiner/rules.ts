@@ -43,39 +43,6 @@ const rules: KarabinerRules[] = [
     ],
   },
 
-  // I couldn't get this work with the magic mouse because it only detects button1 in the karabiner event viewer
-  // You need to enable pro mode in karabiner for the work with the apple mouse
-  // It works with the logitech mouse tough
-  // {
-  //   description: "Simultaneous Left and Right Click to Cmd+Shift+S",
-  //   manipulators: [
-  //     {
-  //       type: "basic",
-  //       parameters: {
-  //         "basic.simultaneous_threshold_milliseconds": 500
-  //       },
-  //       from: {
-  //         simultaneous: [
-  //           { "pointing_button": "button1" },
-  //           { "pointing_button": "button2" }
-  //         ],
-  //         simultaneous_options: {
-  //           detect_key_down_uninterruptedly: true,
-  //           key_down_order: "strict",
-  //           key_up_order: "strict",
-  //           key_up_when: "all"
-  //         }
-  //       },
-  //       to: [
-  //         {
-  //           key_code: "s",
-  //           modifiers: ["left_command", "left_shift"]
-  //         },
-  //       ],
-  //     },
-  //   ],
-  // },
-
   ...createHyperSubLayers({
     // I use spacebar as the app launcher
     spacebar: {
@@ -86,6 +53,8 @@ const rules: KarabinerRules[] = [
       // p: app("Brave Browser"),
       // n: app("Visual Studio Code"),
       // f: app("Finder"),
+      j: open("https://www.jiocinema.com"),
+      c: open("https://chatgpt.com"),
       // y: open("https://www.youtube.com"),
       // t: open("https://x.com/home"),
       // w: open("https://web.whatsapp.com"),
@@ -209,12 +178,13 @@ const rules: KarabinerRules[] = [
     //   y: open(
     //     "raycast://extensions/tonka3000/youtube/search-videos?arguments=%7B%22query%22%3A%22%22%7D"
     //   ),
-    //   u: open("raycast://extensions/raycast/apple-reminders/create-reminder"),
+    // u: open("raycast://extensions/raycast/apple-reminders/create-reminder"),
     //   i: open("raycast://extensions/raycast/apple-reminders/my-reminders"),
     //   o: open("raycast://extensions/raycast/github/search-repositories"),
     //   p: open("raycast://extensions/nhojb/brew/search"),
     //   h: open("raycast://extensions/mattisssa/spotify-player/search"),
     // },
+    x: open("https://x.com"),
 
     // s = "System" or "Service"
     s: {
@@ -309,52 +279,6 @@ const rules: KarabinerRules[] = [
       n: open(
         "btt://execute_assigned_actions_for_trigger/?uuid=9A1CFA49-416C-480E-9430-184D2DAEE1CA"
       ),
-      // Change audio source to airpods
-      m: {
-        to: [
-          {
-            shell_command: `/opt/homebrew/bin/SwitchAudioSource -s "AirPods Pro"; /opt/homebrew/bin/SwitchAudioSource -t input -s "AirPods Pro"`,
-          },
-        ],
-      },
-      // Restart yabai
-      // 0: open(
-      //   "btt://execute_assigned_actions_for_trigger/?uuid=5EC0D2D3-869C-4284-B063-B53A17BF7C4C"
-      // ),
-      // Start video recording
-      // 8: open(
-      //   "btt://execute_assigned_actions_for_trigger/?uuid=24E07831-252B-4EB6-B6C4-5E1CDB742BF9"
-      // ),
-      // // Stop video recording
-      // 9: open(
-      //   "btt://execute_assigned_actions_for_trigger/?uuid=762AF6E2-41EE-4B74-A2D3-9B96C3D777B5"
-      // ),
-      // comma: {
-      //   to: [
-      //     {
-      //       shell_command: `/opt/homebrew/bin/SwitchAudioSource -s "LG TV"; /opt/homebrew/bin/SwitchAudioSource -t input -s "C922 Pro Stream Webcam"`,
-      //     },
-      //   ],
-      // },
-      // Change audio source to mac mini
-      comma: {
-        to: [
-          {
-            shell_command: `/opt/homebrew/bin/SwitchAudioSource -s "Mac mini Speakers"; /opt/homebrew/bin/SwitchAudioSource -t input -s "C922 Pro Stream Webcam"`,
-          },
-        ],
-      },
-      // Change audio source to macbook pro Speakers
-      period: {
-        to: [
-          {
-            shell_command: `/opt/homebrew/bin/SwitchAudioSource -s "MacBook Pro Speakers"; /opt/homebrew/bin/SwitchAudioSource -t input -s "MacBook Pro Microphone"`,
-          },
-        ],
-      },
-      // n: open(
-      //   "raycast://extensions/VladCuciureanu/toothpick/connect-favorite-device-1"
-      // ),
     },
 
     // For betterTouchTool

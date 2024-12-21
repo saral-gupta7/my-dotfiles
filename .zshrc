@@ -146,10 +146,10 @@ alias s='source ~/.zshrc'
 alias i='instaloader'
 alias lf='cd ~/Desktop/lf'
 alias sub='cd ~/Desktop/lf/subjects'
-alias cs='y ~/Desktop/lf/subjects/CS'
+alias cs='cd ~/Desktop/lf/subjects/CS && y ~/Desktop/lf/subjects/CS'
 alias th='vim ~/Desktop/lf/things_to_do.md'
 alias apt='vim ~/Desktop/lf/subjects/Aptitude/progess.md'
-
+alias kara='cd ~/dotfiles/.config/karabiner && vim ~/dotfiles/.config/karabiner/rules.ts'
 # nix aliases
 alias fl='vim ~/.config/nix-darwin/flake.nix'
 alias dar='cd ~/.config/nix-darwin'
@@ -158,6 +158,10 @@ alias bld='darwin-rebuild switch --flake ~/.config/nix-darwin#anyaforger'
 alias phr='vim ~/Desktop/lf/language/english/phrase.md'
 alias nv='cd ~/dotfiles/.config/nvim && vim ~/dotfiles/.config/nvim'
 alias e='exit'
+alias kit='vim ~/dotfiles/.config/kitty/kitty.conf'
+alias cur='vim ~/Desktop/lf/curiosity.md'
+
+
 
 eval "$(zoxide init zsh)"
 eval "$(thefuck --alias)"
@@ -175,7 +179,7 @@ export NVM_DIR="$HOME/.nvm"
 eval "$(starship init zsh)"
 
 
-
+t a
 
 # ---- Android Studio -----
 

@@ -27,6 +27,11 @@
                             {
                                 "conditions": [
                                     {
+                                        "name": "hyper_sublayer_x",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
                                         "name": "hyper_sublayer_s",
                                         "type": "variable_if",
                                         "value": 0
@@ -94,6 +99,52 @@
                                     }
                                 ],
                                 "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_spacebar",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Open https://www.jiocinema.com",
+                                "from": {
+                                    "key_code": "j",
+                                    "modifiers": { "mandatory": ["any"] }
+                                },
+                                "to": [{ "shell_command": "open https://www.jiocinema.com" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_spacebar",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Open https://chatgpt.com",
+                                "from": {
+                                    "key_code": "c",
+                                    "modifiers": { "mandatory": ["any"] }
+                                },
+                                "to": [{ "shell_command": "open https://chatgpt.com" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Hyper Key + x",
+                        "manipulators": [
+                            {
+                                "description": "Open https://x.com",
+                                "from": {
+                                    "key_code": "x",
+                                    "modifiers": { "mandatory": ["left_command", "left_control", "left_shift", "left_option"] }
+                                },
+                                "to": [{ "shell_command": "open https://x.com" }],
+                                "type": "basic"
                             }
                         ]
                     },
@@ -104,6 +155,11 @@
                                 "conditions": [
                                     {
                                         "name": "hyper_sublayer_spacebar",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_x",
                                         "type": "variable_if",
                                         "value": 0
                                     },
@@ -371,51 +427,6 @@
                                 },
                                 "to": [{ "shell_command": "open btt://execute_assigned_actions_for_trigger/?uuid=9A1CFA49-416C-480E-9430-184D2DAEE1CA" }],
                                 "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_s",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "m",
-                                    "modifiers": { "mandatory": ["any"] }
-                                },
-                                "to": [{ "shell_command": "/opt/homebrew/bin/SwitchAudioSource -s \"AirPods Pro\"; /opt/homebrew/bin/SwitchAudioSource -t input -s \"AirPods Pro\"" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_s",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "comma",
-                                    "modifiers": { "mandatory": ["any"] }
-                                },
-                                "to": [{ "shell_command": "/opt/homebrew/bin/SwitchAudioSource -s \"Mac mini Speakers\"; /opt/homebrew/bin/SwitchAudioSource -t input -s \"C922 Pro Stream Webcam\"" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_s",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "period",
-                                    "modifiers": { "mandatory": ["any"] }
-                                },
-                                "to": [{ "shell_command": "/opt/homebrew/bin/SwitchAudioSource -s \"MacBook Pro Speakers\"; /opt/homebrew/bin/SwitchAudioSource -t input -s \"MacBook Pro Microphone\"" }],
-                                "type": "basic"
                             }
                         ]
                     },
@@ -426,6 +437,11 @@
                                 "conditions": [
                                     {
                                         "name": "hyper_sublayer_spacebar",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_x",
                                         "type": "variable_if",
                                         "value": 0
                                     },
@@ -582,6 +598,11 @@
                                 "conditions": [
                                     {
                                         "name": "hyper_sublayer_spacebar",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_x",
                                         "type": "variable_if",
                                         "value": 0
                                     },
@@ -822,6 +843,11 @@
                                         "value": 0
                                     },
                                     {
+                                        "name": "hyper_sublayer_x",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
                                         "name": "hyper_sublayer_s",
                                         "type": "variable_if",
                                         "value": 0
@@ -1049,25 +1075,6 @@
                     }
                 ]
             },
-            "devices": [
-                {
-                    "identifiers": {
-                        "is_keyboard": true,
-                        "product_id": 5853,
-                        "vendor_id": 2385
-                    },
-                    "simple_modifications": [
-                        {
-                            "from": { "key_code": "left_command" },
-                            "to": [{ "key_code": "left_option" }]
-                        },
-                        {
-                            "from": { "key_code": "left_option" },
-                            "to": [{ "key_code": "left_command" }]
-                        }
-                    ]
-                }
-            ],
             "name": "Default",
             "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
         }
