@@ -160,12 +160,11 @@ alias nv='cd ~/dotfiles/.config/nvim && vim ~/dotfiles/.config/nvim'
 alias e='exit'
 alias kit='vim ~/dotfiles/.config/kitty/kitty.conf'
 alias cur='vim ~/Desktop/lf/curiosity.md'
-
-
+alias scp='cd ~/scripts/ && vim ~/scripts/'
+alias lsd='ls -d */' #list directory alias
 
 eval "$(zoxide init zsh)"
 eval "$(thefuck --alias)"
-
 eval "$(atuin init zsh)"
 
 export NVM_DIR="$HOME/.nvm"
@@ -187,7 +186,8 @@ t a
 export ANDROID_HOME=$HOME/Library/Android/sdk 
 export PATH=$PATH:$ANDROID_HOME/emulator 
 export PATH=$PATH:$ANDROID_HOME/platform-tools
-
+# Path for my zsh scripts (It makes it globally accssible)
+export PATH="$HOME/scripts:$PATH"
 # ---- FZF -----
 
 # Set up fzf key bindings and fuzzy completion

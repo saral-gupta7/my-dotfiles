@@ -185,6 +185,7 @@ const rules: KarabinerRules[] = [
     //   h: open("raycast://extensions/mattisssa/spotify-player/search"),
     // },
     x: open("https://x.com"),
+    g: open("https://github.com"),
 
     // s = "System" or "Service"
     s: {

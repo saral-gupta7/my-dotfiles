@@ -32,6 +32,11 @@
                                         "value": 0
                                     },
                                     {
+                                        "name": "hyper_sublayer_g",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
                                         "name": "hyper_sublayer_s",
                                         "type": "variable_if",
                                         "value": 0
@@ -149,6 +154,20 @@
                         ]
                     },
                     {
+                        "description": "Hyper Key + g",
+                        "manipulators": [
+                            {
+                                "description": "Open https://github.com",
+                                "from": {
+                                    "key_code": "g",
+                                    "modifiers": { "mandatory": ["left_command", "left_control", "left_shift", "left_option"] }
+                                },
+                                "to": [{ "shell_command": "open https://github.com" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Hyper Key sublayer \"s\"",
                         "manipulators": [
                             {
@@ -160,6 +179,11 @@
                                     },
                                     {
                                         "name": "hyper_sublayer_x",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_g",
                                         "type": "variable_if",
                                         "value": 0
                                     },
@@ -446,6 +470,11 @@
                                         "value": 0
                                     },
                                     {
+                                        "name": "hyper_sublayer_g",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
                                         "name": "hyper_sublayer_s",
                                         "type": "variable_if",
                                         "value": 0
@@ -603,6 +632,11 @@
                                     },
                                     {
                                         "name": "hyper_sublayer_x",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_g",
                                         "type": "variable_if",
                                         "value": 0
                                     },
@@ -844,6 +878,11 @@
                                     },
                                     {
                                         "name": "hyper_sublayer_x",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_g",
                                         "type": "variable_if",
                                         "value": 0
                                     },
