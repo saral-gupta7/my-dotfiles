@@ -112,18 +112,7 @@ source $ZSH/oh-my-zsh.sh
 #   export EDITOR='mvim'
 # fi
 
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-# alias vim = "nvim"
 
 # My Aliases
 alias vim="nvim"
@@ -162,6 +151,9 @@ alias kit='vim ~/dotfiles/.config/kitty/kitty.conf'
 alias cur='vim ~/Desktop/lf/curiosity.md'
 alias scp='cd ~/scripts/ && vim ~/scripts/'
 alias lsd='ls -d */' #list directory alias
+alias jap='cd ~/desktop/lf/language/japanese/ && vim ~/desktop/lf/language/japanese/resources.md'
+alias ta='tmux attach'
+alias vimt='vim ~/dotfiles/.tmux.conf'
 
 eval "$(zoxide init zsh)"
 eval "$(thefuck --alias)"

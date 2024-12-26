@@ -46,18 +46,10 @@ const rules: KarabinerRules[] = [
   ...createHyperSubLayers({
     // I use spacebar as the app launcher
     spacebar: {
-      // s: app("Spotify"),
-      // i: app("Alacritty"),
-      // l: app("Obsidian"),
-      // k: app("Safari"),
-      // p: app("Brave Browser"),
-      // n: app("Visual Studio Code"),
-      // f: app("Finder"),
+      f: app("Finder"),
       j: open("https://www.jiocinema.com"),
       c: open("https://chatgpt.com"),
-      // y: open("https://www.youtube.com"),
-      // t: open("https://x.com/home"),
-      // w: open("https://web.whatsapp.com"),
+      h: open("https://hotstar.com"),
       // Below I'm just leaving comments of the shortcuts I specifically use on
       // apps in case I need to configure them on a new computer
       // hyper+w - paste activate
@@ -72,60 +64,55 @@ const rules: KarabinerRules[] = [
 
     // // t = "tmux" - video that explains how this works below
     // // https://youtu.be/MCbEPylDEWU
-    // t: {
-    //   // home
-    //   h: open(
-    //     "btt://execute_assigned_actions_for_trigger/?uuid=F431526A-E836-451C-BD36-67AB7DF7CAC2"
-    //   ),
-    //   // dotfiles-latest
-    //   j: open(
-    //     "btt://execute_assigned_actions_for_trigger/?uuid=E2BEB425-38A3-46D8-AAF8-067CA979D4FB"
-    //   ),
-    //   // dotfiles-public
-    //   // k: open(
-    //   //   "btt://execute_assigned_actions_for_trigger/?uuid=96E9BDEC-F0C5-4E77-AF1F-1EF5914BFDDF"
-    //   // ),
-    //   // linkarzu.github.io
-    //   l: open(
-    //     "btt://execute_assigned_actions_for_trigger/?uuid=1893BEBE-DC99-41CC-9BE6-74B66E3BBB2C"
-    //   ),
-    //   // scripts
-    //   semicolon: open(
-    //     "btt://execute_assigned_actions_for_trigger/?uuid=9E98F83C-C4C4-4B9B-AFF7-03AAAF2939A5"
-    //   ),
-    //   // containerdata
-    //   p: open(
-    //     "btt://execute_assigned_actions_for_trigger/?uuid=55A10BEE-B776-4D93-B5ED-024A58595D93"
-    //   ),
-    //   // obsidian_main
-    //   u: open(
-    //     "btt://execute_assigned_actions_for_trigger/?uuid=6AACE82D-F9C7-403D-9B27-B758CD1B9E1B"
-    //   ),
-    //   // iCloud scripts
-    //   i: open(
-    //     "btt://execute_assigned_actions_for_trigger/?uuid=03F1E256-FF80-43BA-873C-195628FA5996"
-    //   ),
-    //   // containerdata-public
-    //   o: open(
-    //     "btt://execute_assigned_actions_for_trigger/?uuid=13ED33CA-99DF-4782-BDA6-E01BF3FF0DCC"
-    //   ),
-    //   // Find
-    //   n: open(
-    //     "btt://execute_assigned_actions_for_trigger/?uuid=92398D5C-B95F-4E31-9CB9-1E3E732AF1C0"
-    //   ),
-    //   // daily note
-    //   r: open(
-    //     "btt://execute_assigned_actions_for_trigger/?uuid=9B82DF9D-2DE2-4872-903A-D3C17EE9D555"
-    //   ),
-    //   // open karabiner rules.ts file
-    //   e: open(
-    //     "btt://execute_assigned_actions_for_trigger/?uuid=3DEAE844-CD5B-4695-A58D-AC7CFA935D46"
-    //   ),
-    //   // Go github dir
-    //   open_bracket: open(
-    //     "btt://execute_assigned_actions_for_trigger/?uuid=70963A3C-7982-4BB4-A8E0-5181EC216383"
-    //   ),
-    // },
+    t: {
+      i: open(
+        "btt://execute_assigned_actions_for_trigger/?uuid=983BC102-4CDC-45F9-8E9A-BE20D41DDE94"
+      ),
+      //   // dotfiles-public
+      o: open(
+        "btt://execute_assigned_actions_for_trigger/?uuid=FB2B98F0-D86C-4F11-993F-CBB9D5CACC56"
+      ),
+      //   // linkarzu.github.io
+      p: open(
+        "btt://execute_assigned_actions_for_trigger/?uuid=2AB31796-3161-4D9D-9C22-533037B4D37A"
+      ),
+      //   // scripts
+      //   semicolon: open(
+      //     "btt://execute_assigned_actions_for_trigger/?uuid=9E98F83C-C4C4-4B9B-AFF7-03AAAF2939A5"
+      //   ),
+      //   // containerdata
+      //   p: open(
+      //     "btt://execute_assigned_actions_for_trigger/?uuid=55A10BEE-B776-4D93-B5ED-024A58595D93"
+      //   ),
+      //   // obsidian_main
+      //   u: open(
+      //     "btt://execute_assigned_actions_for_trigger/?uuid=6AACE82D-F9C7-403D-9B27-B758CD1B9E1B"
+      //   ),
+      //   // iCloud scripts
+      //   i: open(
+      //     "btt://execute_assigned_actions_for_trigger/?uuid=03F1E256-FF80-43BA-873C-195628FA5996"
+      //   ),
+      //   // containerdata-public
+      //   o: open(
+      //     "btt://execute_assigned_actions_for_trigger/?uuid=13ED33CA-99DF-4782-BDA6-E01BF3FF0DCC"
+      //   ),
+      //   // Find
+      //   n: open(
+      //     "btt://execute_assigned_actions_for_trigger/?uuid=92398D5C-B95F-4E31-9CB9-1E3E732AF1C0"
+      //   ),
+      //   // daily note
+      //   r: open(
+      //     "btt://execute_assigned_actions_for_trigger/?uuid=9B82DF9D-2DE2-4872-903A-D3C17EE9D555"
+      //   ),
+      //   // open karabiner rules.ts file
+      //   e: open(
+      //     "btt://execute_assigned_actions_for_trigger/?uuid=3DEAE844-CD5B-4695-A58D-AC7CFA935D46"
+      //   ),
+      //   // Go github dir
+      //   open_bracket: open(
+      //     "btt://execute_assigned_actions_for_trigger/?uuid=70963A3C-7982-4BB4-A8E0-5181EC216383"
+      //   ),
+    },
 
     // // e = "etmux" - This is to SSH to devices - video that explains how this works below
     // // https://youtu.be/MCbEPylDEWU
@@ -184,7 +171,13 @@ const rules: KarabinerRules[] = [
     //   p: open("raycast://extensions/nhojb/brew/search"),
     //   h: open("raycast://extensions/mattisssa/spotify-player/search"),
     // },
-    x: open("https://x.com"),
+
+    x: {
+      n: open("https://x.com/Im_nullset"),
+      m: open("https://x.com/sixthstumpedge"),
+    },
+    v: open("https://vercel.com/saral-guptas-projects/min-website"),
+
     g: open("https://github.com"),
 
     // s = "System" or "Service"
