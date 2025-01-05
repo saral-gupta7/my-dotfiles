@@ -154,6 +154,7 @@ alias lsd='ls -d */' #list directory alias
 alias jap='cd ~/desktop/lf/language/japanese/ && vim ~/desktop/lf/language/japanese/resources.md'
 alias ta='tmux attach'
 alias vimt='vim ~/dotfiles/.tmux.conf'
+alias sem='y ~/Downloads/sem4/'
 
 eval "$(zoxide init zsh)"
 eval "$(thefuck --alias)"
@@ -239,3 +240,4 @@ export HERD_PHP_84_INI_SCAN_DIR="/Users/anyaforger/Library/Application Support/H
 
 # Herd injected PHP 8.2 configuration.
 export HERD_PHP_82_INI_SCAN_DIR="/Users/anyaforger/Library/Application Support/Herd/config/php/82/"
+export ANI_CLI_PLAYER="mpv"

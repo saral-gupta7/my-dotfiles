@@ -77,9 +77,9 @@ const rules: KarabinerRules[] = [
         "btt://execute_assigned_actions_for_trigger/?uuid=2AB31796-3161-4D9D-9C22-533037B4D37A"
       ),
       //   // scripts
-      //   semicolon: open(
-      //     "btt://execute_assigned_actions_for_trigger/?uuid=9E98F83C-C4C4-4B9B-AFF7-03AAAF2939A5"
-      //   ),
+      semicolon: open(
+        "btt://execute_assigned_actions_for_trigger/?uuid=624BA3B2-B5D8-443E-A91D-CC97AA2C1891"
+      ),
       //   // containerdata
       //   p: open(
       //     "btt://execute_assigned_actions_for_trigger/?uuid=55A10BEE-B776-4D93-B5ED-024A58595D93"
