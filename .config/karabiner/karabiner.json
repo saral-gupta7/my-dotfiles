@@ -178,6 +178,22 @@
                                 },
                                 "to": [{ "shell_command": "open https://hotstar.com" }],
                                 "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_spacebar",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Open https://netflix.com",
+                                "from": {
+                                    "key_code": "n",
+                                    "modifiers": { "mandatory": ["any"] }
+                                },
+                                "to": [{ "shell_command": "open https://netflix.com" }],
+                                "type": "basic"
                             }
                         ]
                     },

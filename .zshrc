@@ -155,7 +155,10 @@ alias jap='cd ~/desktop/lf/language/japanese/ && vim ~/desktop/lf/language/japan
 alias ta='tmux attach'
 alias vimt='vim ~/dotfiles/.tmux.conf'
 alias sem='y ~/Downloads/sem4/'
-
+alias ani='ani-cli'
+alias anime='vim ~/Desktop/lf/WatchList/anime.md'
+alias life='vim ~/Desktop/lf/life/life.md'
+alias book='y ~/Desktop/lf/subjects/CS/Books/'
 eval "$(zoxide init zsh)"
 eval "$(thefuck --alias)"
 eval "$(atuin init zsh)"
@@ -241,3 +244,12 @@ export HERD_PHP_84_INI_SCAN_DIR="/Users/anyaforger/Library/Application Support/H
 # Herd injected PHP 8.2 configuration.
 export HERD_PHP_82_INI_SCAN_DIR="/Users/anyaforger/Library/Application Support/Herd/config/php/82/"
 export ANI_CLI_PLAYER="mpv"
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+export PATH=$PATH:$HOME/.local/opt/go/bin
+export PATH=$PATH:$HOME/go/bin
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)

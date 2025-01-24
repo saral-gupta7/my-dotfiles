@@ -50,6 +50,8 @@ const rules: KarabinerRules[] = [
       j: open("https://www.jiocinema.com"),
       c: open("https://chatgpt.com"),
       h: open("https://hotstar.com"),
+      n: open("https://netflix.com"),
+
       // Below I'm just leaving comments of the shortcuts I specifically use on
       // apps in case I need to configure them on a new computer
       // hyper+w - paste activate
