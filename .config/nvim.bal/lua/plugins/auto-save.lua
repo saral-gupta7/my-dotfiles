@@ -9,4 +9,3 @@ return {
     -- just to check
   },
 }
--- this is a new line comment

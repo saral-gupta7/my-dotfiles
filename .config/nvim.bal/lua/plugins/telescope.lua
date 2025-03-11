@@ -2,7 +2,7 @@ return {
   "nvim-telescope/telescope.nvim",
   dependencies = {
     "nvim-lua/plenary.nvim",
-    "nvim-telescope/telescope-ui-select.nvim" -- Add this dependency
+    "nvim-telescope/telescope-ui-select.nvim", -- Add this dependency
   },
   config = function()
     require("telescope").setup({

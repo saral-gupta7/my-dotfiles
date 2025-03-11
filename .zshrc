@@ -159,6 +159,9 @@ alias ani='ani-cli'
 alias anime='vim ~/Desktop/lf/WatchList/anime.md'
 alias life='vim ~/Desktop/lf/life/life.md'
 alias book='y ~/Desktop/lf/subjects/CS/Books/'
+alias vrl='python -m venv venv'
+alias hack='vim ~/recreation/hack/res.md'
+
 eval "$(zoxide init zsh)"
 eval "$(thefuck --alias)"
 eval "$(atuin init zsh)"
@@ -182,6 +185,7 @@ t a
 export ANDROID_HOME=$HOME/Library/Android/sdk 
 export PATH=$PATH:$ANDROID_HOME/emulator 
 export PATH=$PATH:$ANDROID_HOME/platform-tools
+
 # Path for my zsh scripts (It makes it globally accssible)
 export PATH="$HOME/scripts:$PATH"
 # ---- FZF -----
