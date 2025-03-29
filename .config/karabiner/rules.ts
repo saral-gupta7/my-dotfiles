@@ -47,10 +47,10 @@ const rules: KarabinerRules[] = [
     // I use spacebar as the app launcher
     spacebar: {
       f: app("Finder"),
-      j: open("https://www.jiocinema.com"),
       c: open("https://chatgpt.com"),
       h: open("https://hotstar.com"),
       n: open("https://netflix.com"),
+      i: open("https://www.google.com/search?q=ipl"),
 
       // Below I'm just leaving comments of the shortcuts I specifically use on
       // apps in case I need to configure them on a new computer

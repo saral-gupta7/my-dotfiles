@@ -144,7 +144,7 @@ alias fl='vim ~/.config/nix-darwin/flake.nix'
 alias dar='cd ~/.config/nix-darwin'
 alias bld='darwin-rebuild switch --flake ~/.config/nix-darwin#anyaforger'
 
-alias phr='vim ~/Desktop/lf/language/english/phrase.md'
+alias phr='vim ~/Desktop/lf/subjects/life/language/english/phrase.md'
 alias nv='cd ~/dotfiles/.config/nvim && vim ~/dotfiles/.config/nvim'
 alias e='exit'
 alias kit='vim ~/dotfiles/.config/kitty/kitty.conf'
@@ -159,13 +159,14 @@ alias ani='ani-cli'
 alias anime='vim ~/Desktop/lf/WatchList/anime.md'
 alias life='vim ~/Desktop/lf/life/life.md'
 alias book='y ~/Desktop/lf/subjects/CS/Books/'
-alias vrl='python -m venv venv'
 alias hack='vim ~/recreation/hack/res.md'
 
 eval "$(zoxide init zsh)"
 eval "$(thefuck --alias)"
 eval "$(atuin init zsh)"
 
+# python specific
+alias mig='python manage.py makemigrations; python manage.py migrate'
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
@@ -257,3 +258,9 @@ export PATH=$PATH:$HOME/go/bin
 
 # Load Angular CLI autocompletion.
 source <(ng completion script)
+
+# Added by Windsurf
+export PATH="/Users/anyaforger/.codeium/windsurf/bin:$PATH"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/anyaforger/.lmstudio/bin"

@@ -1,0 +1,8 @@
+[preview]
+enable = true
+max_width = 4500   # Set a larger width for the preview pane
+max_height = 4000    # Set a larger height for the preview pane
+
+[preview.commands]
+image = ["ueberzug-layer"]  # Use ueberzug for rendering images
+

@@ -139,22 +139,6 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "Open https://www.jiocinema.com",
-                                "from": {
-                                    "key_code": "j",
-                                    "modifiers": { "mandatory": ["any"] }
-                                },
-                                "to": [{ "shell_command": "open https://www.jiocinema.com" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_spacebar",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
                                 "description": "Open https://chatgpt.com",
                                 "from": {
                                     "key_code": "c",
@@ -193,6 +177,22 @@
                                     "modifiers": { "mandatory": ["any"] }
                                 },
                                 "to": [{ "shell_command": "open https://netflix.com" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_spacebar",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Open https://www.google.com/search?q=ipl",
+                                "from": {
+                                    "key_code": "i",
+                                    "modifiers": { "mandatory": ["any"] }
+                                },
+                                "to": [{ "shell_command": "open https://www.google.com/search?q=ipl" }],
                                 "type": "basic"
                             }
                         ]
@@ -1500,25 +1500,6 @@
                     }
                 ]
             },
-            "devices": [
-                {
-                    "identifiers": {
-                        "is_keyboard": true,
-                        "product_id": 49948,
-                        "vendor_id": 1133
-                    },
-                    "simple_modifications": [
-                        {
-                            "from": { "key_code": "left_command" },
-                            "to": [{ "key_code": "left_option" }]
-                        },
-                        {
-                            "from": { "key_code": "left_option" },
-                            "to": [{ "key_code": "left_command" }]
-                        }
-                    ]
-                }
-            ],
             "name": "Default",
             "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
         }
