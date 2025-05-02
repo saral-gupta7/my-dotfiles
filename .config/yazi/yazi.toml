@@ -6,3 +6,17 @@ max_height = 4000    # Set a larger height for the preview pane
 [preview.commands]
 image = ["ueberzug-layer"]  # Use ueberzug for rendering images
 
+[plugin]
+prepend_previewers = [
+  { mime = "audio/*",   run = "exifaudio"},
+  { name = "*.md", run = "glow" },
+  { name = "*.csv", run = "duckdb" },  
+  { name = "*.tsv", run = "duckdb" },  
+  { name = "*.json", run = "duckdb" },  
+  { name = "*.parquet", run = "duckdb" },  
+  { name = "*.txt", run = "duckdb" },  
+  { name = "*.xlsx", run = "duckdb" },  
+  { name = "*.db", run = "duckdb" },
+  { name = "*.duckdb", run = "duckdb" }
+]
+

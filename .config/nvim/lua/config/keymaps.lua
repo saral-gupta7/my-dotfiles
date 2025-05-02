@@ -8,3 +8,4 @@ vim.api.nvim_set_keymap("i", "jk", "<ESC>", { noremap = false })
 local keymap = vim.keymap
 
 keymap.set("n", "<C-d>", "<C-d>zz")
+-- keymap.set("n", "<C-x>", toggle.checkbox_dot, opts)

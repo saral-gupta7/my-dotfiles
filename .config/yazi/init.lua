@@ -1,1 +1,42 @@
 require("full-border"):setup()
+-- DuckDB plugin configuration
+require("duckdb"):setup()
+-- ~/.config/yazi/init.lua
+require("bookmarks"):setup({
+	last_directory = { enable = false, persist = false, mode = "dir" },
+	persist = "all",
+	desc_format = "full",
+	file_pick_mode = "hover",
+	custom_desc_input = false,
+	notify = {
+		enable = false,
+		timeout = 1,
+		message = {
+			new = "New bookmark '<key>' -> '<folder>'",
+			delete = "Deleted bookmark in '<key>'",
+			delete_all = "Deleted all bookmarks",
+		},
+	},
+})
+-- require("bunny"):setup({
+-- 	hops = {
+-- 		{ key = "r", path = "/" },
+-- 		{ key = "v", path = "/var" },
+-- 		{ key = "t", path = "/tmp" },
+-- 		{ key = "n", path = "/nix/store", desc = "Nix store" },
+-- 		{ key = { "h", "h" }, path = "~", desc = "Home" },
+-- 		{ key = { "h", "m" }, path = "~/Music", desc = "Music" },
+-- 		{ key = { "h", "d" }, path = "~/Documents", desc = "Documents" },
+-- 		{ key = { "h", "k" }, path = "~/Desktop", desc = "Desktop" },
+-- 		{ key = "c", path = "~/.config", desc = "Config files" },
+-- 		{ key = { "l", "s" }, path = "~/.local/share", desc = "Local share" },
+-- 		{ key = { "l", "b" }, path = "~/.local/bin", desc = "Local bin" },
+-- 		{ key = { "l", "t" }, path = "~/.local/state", desc = "Local state" },
+-- 		-- key and path attributes are required, desc is optional
+-- 	},
+-- 	desc_strategy = "path", -- If desc isn't present, use "path" or "filename", default is "path"
+-- 	notify = false, -- Notify after hopping, default is false
+-- 	fuzzy_cmd = "fzf", -- Fuzzy searching command, default is "fzf"
+-- })
+
+require("starship"):setup()

@@ -51,6 +51,7 @@ const rules: KarabinerRules[] = [
       h: open("https://hotstar.com"),
       n: open("https://netflix.com"),
       i: open("https://www.google.com/search?q=ipl"),
+      t: open("https://monkeytype.com"),
 
       // Below I'm just leaving comments of the shortcuts I specifically use on
       // apps in case I need to configure them on a new computer

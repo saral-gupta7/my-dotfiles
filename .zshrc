@@ -113,6 +113,14 @@ source $ZSH/oh-my-zsh.sh
 # fi
 
 
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
 
 # My Aliases
 alias vim="nvim"
@@ -123,8 +131,6 @@ alias t="tmux"
 alias cat="bat"
 alias pip='pip3'
 alias c='clear'
-alias ff='fastfetch'
-alias y='yazi'
 alias yt="yt-dlp"
 alias lz='lazygit'
 alias dt='cd ~/Desktop'
@@ -149,7 +155,7 @@ alias nv='cd ~/dotfiles/.config/nvim && vim ~/dotfiles/.config/nvim'
 alias e='exit'
 alias kit='vim ~/dotfiles/.config/kitty/kitty.conf'
 alias cur='vim ~/Desktop/lf/curiosity.md'
-alias scp='cd ~/scripts/ && vim ~/scripts/'
+alias scp='y ~/scripts/'
 alias lsd='ls -d */' #list directory alias
 alias jap='cd ~/desktop/lf/language/japanese/ && vim ~/desktop/lf/language/japanese/resources.md'
 alias ta='tmux attach'
@@ -160,6 +166,9 @@ alias anime='vim ~/Desktop/lf/WatchList/anime.md'
 alias life='vim ~/Desktop/lf/life/life.md'
 alias book='y ~/Desktop/lf/subjects/CS/Books/'
 alias hack='vim ~/recreation/hack/res.md'
+alias bi='brew install'
+alias french='vim ~/Desktop/lf/subjects/life/language/French'
+alias pdf='img2pdf'
 
 eval "$(zoxide init zsh)"
 eval "$(thefuck --alias)"
@@ -182,7 +191,6 @@ t a
 
 # ---- Android Studio -----
 
-
 export ANDROID_HOME=$HOME/Library/Android/sdk 
 export PATH=$PATH:$ANDROID_HOME/emulator 
 export PATH=$PATH:$ANDROID_HOME/platform-tools
@@ -190,7 +198,7 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 # Path for my zsh scripts (It makes it globally accssible)
 export PATH="$HOME/scripts:$PATH"
 # ---- FZF -----
-
+export PATH=$PATH:/opt/homebrew/bin/cb
 # Set up fzf key bindings and fuzzy completion
 eval "$(fzf --zsh)"
 # -- Use fd instead of fzf --
@@ -264,3 +272,5 @@ export PATH="/Users/anyaforger/.codeium/windsurf/bin:$PATH"
 
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/Users/anyaforger/.lmstudio/bin"
+
+fpath+=~/.zfunc; autoload -Uz compinit; compinit
