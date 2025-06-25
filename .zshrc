@@ -113,7 +113,7 @@ source $ZSH/oh-my-zsh.sh
 # fi
 
 
-function y() {
+function f() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	yazi "$@" --cwd-file="$tmp"
 	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
@@ -150,12 +150,11 @@ alias fl='vim ~/.config/nix-darwin/flake.nix'
 alias dar='cd ~/.config/nix-darwin'
 alias bld='darwin-rebuild switch --flake ~/.config/nix-darwin#anyaforger'
 
-alias phr='vim ~/Desktop/lf/subjects/life/language/english/phrase.md'
 alias nv='cd ~/dotfiles/.config/nvim && vim ~/dotfiles/.config/nvim'
 alias e='exit'
 alias kit='vim ~/dotfiles/.config/kitty/kitty.conf'
 alias cur='vim ~/Desktop/lf/curiosity.md'
-alias scp='y ~/scripts/'
+alias scp='f ~/scripts/'
 alias lsd='ls -d */' #list directory alias
 alias jap='cd ~/desktop/lf/language/japanese/ && vim ~/desktop/lf/language/japanese/resources.md'
 alias ta='tmux attach'
@@ -164,11 +163,41 @@ alias sem='y ~/Downloads/sem4/'
 alias ani='ani-cli'
 alias anime='vim ~/Desktop/lf/WatchList/anime.md'
 alias life='vim ~/Desktop/lf/life/life.md'
-alias book='y ~/Desktop/lf/subjects/CS/Books/'
+alias book='f ~/Desktop/lf/subjects/CS/Books/'
+alias kp='vim /Users/anyaforger/.config/nvim/lua/config/keymaps.lua'
+alias pro='vim /Users/anyaforger/Desktop/lf/subjects/Intern/process.md'
+alias rules='vim /Users/anyaforger/Desktop/lf/subjects/life/rules.md'
+# word and book aliases
+alias phr='vim ~/Desktop/lf/subjects/life/language/english/phrase.md'
+alias word='vim /Users/anyaforger/Desktop/lf/subjects/life/language/English/words.md'
+
 alias hack='vim ~/recreation/hack/res.md'
 alias bi='brew install'
 alias french='vim ~/Desktop/lf/subjects/life/language/French'
 alias pdf='img2pdf'
+alias npd='npx prisma migrate dev'
+alias p='python'
+
+
+# Rust Based
+alias cr='cargo run'
+
+
+# Developer Servers
+
+alias nd='npm run dev'
+alias pd='pnpm run dev'
+alias pat='pnpm add tailwindcss @tailwindcss/vite';
+
+
+
+
+
+
+
+
+alias stat='stat -x'
+
 
 eval "$(zoxide init zsh)"
 eval "$(thefuck --alias)"
@@ -182,30 +211,48 @@ export NVM_DIR="$HOME/.nvm"
 
 
 # Starship
+# Check that the function `starship_zle-keymap-select()` is defined.
+# xref: https://github.com/starship/starship/issues/3418
+type starship_zle-keymap-select >/dev/null || \
+  {
+    eval "$(/usr/local/bin/starship init zsh)"
+  }
+
+# eval "$(starship init zsh)"
 
 
-eval "$(starship init zsh)"
 
-
-t a
 
 # ---- Android Studio -----
+export CFLAGS="-I/opt/bison/bison-3.7.91/share/include ${CFLAGS}"
+export CXXFLAGS="-I/opt/bison/bison-3.7.91/share/include ${CXXFLAGS}"
+export LDFLAGS="-L/opt/bison/bison-3.7.91/lib ${LDFLAGS}"
+export PATH="/opt/bison/bison-3.7.91/bin:${PATH}"
 
 export ANDROID_HOME=$HOME/Library/Android/sdk 
 export PATH=$PATH:$ANDROID_HOME/emulator 
-export PATH=$PATH:$ANDROID_HOME/platform-tools
 
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+# tmuxifer path
+export PATH="$HOME/.tmuxifier/bin:$PATH"
+
+eval "$(tmuxifier init -)"
 # Path for my zsh scripts (It makes it globally accssible)
 export PATH="$HOME/scripts:$PATH"
+
 # ---- FZF -----
 export PATH=$PATH:/opt/homebrew/bin/cb
+
 # Set up fzf key bindings and fuzzy completion
 eval "$(fzf --zsh)"
-# -- Use fd instead of fzf --
 
+# -- Use fd instead of fzf --
 export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git"
+
+export LIBRARY_PATH="$LIBRARY_PATH:/opt/homebrew/opt/libiconv/lib"
+export C_INCLUDE_PATH="$C_INCLUDE_PATH:/opt/homebrew/opt/libiconv/include"
 
 # Use fd (https://github.com/sharkdp/fd) for listing path candidates.
 # - The first argument to the function ($1) is the base path to start traversal
@@ -269,8 +316,41 @@ source <(ng completion script)
 
 # Added by Windsurf
 export PATH="/Users/anyaforger/.codeium/windsurf/bin:$PATH"
-
+export PATH="/opt/homebrew/bin:$PATH"
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/Users/anyaforger/.lmstudio/bin"
 
 fpath+=~/.zfunc; autoload -Uz compinit; compinit
+
+. "$HOME/.local/bin/env"
+
+# pnpm
+export PNPM_HOME="/Users/anyaforger/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/opt/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/opt/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/opt/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+export PATH="$HOME/.local/share/solana/install/active_release/bin:$PATH"
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+export PATH="$HOME/.local/share/solana/install/active_release/bin:$PATH"
+export PATH="$HOME/.local/share/solana/install/active_release/bin:$PATH"
+export PATH="$HOME/.local/share/solana/install/active_release/bin:$PATH"
+export PATH="$HOME/.local/share/solana/install/active_release/bin:$PATH"

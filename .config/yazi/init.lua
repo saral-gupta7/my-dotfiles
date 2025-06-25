@@ -2,22 +2,22 @@ require("full-border"):setup()
 -- DuckDB plugin configuration
 require("duckdb"):setup()
 -- ~/.config/yazi/init.lua
-require("bookmarks"):setup({
-	last_directory = { enable = false, persist = false, mode = "dir" },
-	persist = "all",
-	desc_format = "full",
-	file_pick_mode = "hover",
-	custom_desc_input = false,
-	notify = {
-		enable = false,
-		timeout = 1,
-		message = {
-			new = "New bookmark '<key>' -> '<folder>'",
-			delete = "Deleted bookmark in '<key>'",
-			delete_all = "Deleted all bookmarks",
-		},
-	},
-})
+-- require("bookmarks"):setup({
+-- 	last_directory = { enable = false, persist = false, mode = "dir" },
+-- 	persist = "all",
+-- 	desc_format = "full",
+-- 	file_pick_mode = "hover",
+-- 	custom_desc_input = false,
+-- 	notify = {
+-- 		enable = false,
+-- 		timeout = 1,
+-- 		message = {
+-- 			new = "New bookmark '<key>' -> '<folder>'",
+-- 			delete = "Deleted bookmark in '<key>'",
+-- 			delete_all = "Deleted all bookmarks",
+-- 		},
+-- 	},
+-- })
 -- require("bunny"):setup({
 -- 	hops = {
 -- 		{ key = "r", path = "/" },

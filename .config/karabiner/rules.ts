@@ -176,7 +176,7 @@ const rules: KarabinerRules[] = [
     // },
 
     x: {
-      n: open("https://x.com/Im_nullset"),
+      n: open("https://x.com/enigma_sx"),
       m: open("https://x.com/sixthstumpedge"),
     },
     v: open("https://vercel.com/saral-guptas-projects/min-website"),
