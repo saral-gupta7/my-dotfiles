@@ -1,117 +1,24 @@
-# Amazon Q pre block. Keep at the top of this file. [[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh" set -o vi
 
+# Enable vim mode in terminal and setting up jk keymap to enter normal mode.
 set -o vi
 bindkey -M viins 'jk' vi-cmd-mode
+
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$GOPATH/bin
 
 export EDITOR="nvim"
 export VISUAL="nvim"
 
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-#
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=${PATH}:/usr/local/mysql-8.3.0-macos14-arm64/bin/
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-# Set name of the theme to load --- if set to "random", it will
-# load a random heme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-# ZSH_THEME="powerlevel10k/powerlevel10k"
 
-# Set list of themes to pick from when loading at random
-# Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in $ZSH/themes/
-# If set to an empty array, this variable will have no effect.
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
-
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
-
-# Uncomment the following line to use hyphen-insensitive completion.
-# Case-sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
-
-# Uncomment one of the following lines to change the auto-update behavior
-# zstyle ':omz:update' mode disabled  # disable automatic updates
-# zstyle ':omz:update' mode auto      # update automatically without asking
-# zstyle ':omz:update' mode reminder  # just remind me to update when it's time
-
-# Uncomment the following line to change how often to auto-update (in days).
-# zstyle ':omz:update' frequency 13
-
-# Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS="true"
-
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
-
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
-# You can also set it to another string to have that shown instead of the default red dots.
-# e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
-# Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
-# COMPLETION_WAITING_DOTS="true"
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# You can set one of the optional three formats:
-# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# or set a custom format using the strftime function format specifications,
-# see 'man strftime' for details.
-# HIST_STAMPS="mm/dd/yyyy"
-
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
-# Which plugins would you like to load?
-# Standard plugins can be found in $ZSH/plugins/
-# Custonpm run devm plugins may be added to $ZSH_CUSTOM/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
+# zsh important plugins installation
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting web-search)
-
 source $ZSH/oh-my-zsh.sh
 
 
-
-
-
-
-
-
-
-
-
-# User configuration
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
+# setting up yazi shortcuts that also changes directories based upon last exit!
 
 function f() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
@@ -123,6 +30,8 @@ function f() {
 }
 
 # My Aliases
+
+# Basic Necessities
 alias vim="nvim"
 alias python="python3"
 alias cd="z"
@@ -130,52 +39,42 @@ alias ls="eza --icons=always"
 alias t="tmux"
 alias cat="bat"
 alias pip='pip3'
+alias s='source ~/.zshrc'
 alias c='clear'
-alias yt="yt-dlp"
 alias lz='lazygit'
-alias dt='cd ~/Desktop'
+alias e='exit'
+alias vimt='vim ~/dotfiles/.tmux.conf'
+alias ani='ani-cli'
+alias yt="yt-dlp"
+alias kp='vim /Users/anyaforger/.config/nvim/lua/config/keymaps.lua'
+alias bi='brew install'
 alias zsh='vim ~/dotfiles/.zshrc'
+
 alias dot='cd ~/dotfiles'
 alias inf='vim ~/Desktop/learn/terminal/info.md'
-alias s='source ~/.zshrc'
 alias i='instaloader'
-alias lf='cd ~/Desktop/lf'
-alias sub='cd ~/Desktop/lf/subjects'
 alias cs='cd ~/Desktop/lf/subjects/CS && y ~/Desktop/lf/subjects/CS'
-alias th='vim ~/Desktop/lf/things_to_do.md'
-alias apt='vim ~/Desktop/lf/subjects/Aptitude/progess.md'
 alias kara='cd ~/dotfiles/.config/karabiner && vim ~/dotfiles/.config/karabiner/rules.ts'
-# nix aliases
+
+# nix aliases (not used anymore)
 alias fl='vim ~/.config/nix-darwin/flake.nix'
 alias dar='cd ~/.config/nix-darwin'
 alias bld='darwin-rebuild switch --flake ~/.config/nix-darwin#anyaforger'
 
 alias nv='cd ~/dotfiles/.config/nvim && vim ~/dotfiles/.config/nvim'
-alias e='exit'
 alias kit='vim ~/dotfiles/.config/kitty/kitty.conf'
 alias cur='vim ~/Desktop/lf/curiosity.md'
 alias scp='f ~/scripts/'
 alias lsd='ls -d */' #list directory alias
-alias jap='cd ~/desktop/lf/language/japanese/ && vim ~/desktop/lf/language/japanese/resources.md'
 alias ta='tmux attach'
-alias vimt='vim ~/dotfiles/.tmux.conf'
 alias sem='y ~/Downloads/sem4/'
-alias ani='ani-cli'
-alias anime='vim ~/Desktop/lf/WatchList/anime.md'
 alias life='vim ~/Desktop/lf/life/life.md'
 alias book='f ~/Desktop/lf/subjects/CS/Books/'
-alias kp='vim /Users/anyaforger/.config/nvim/lua/config/keymaps.lua'
-alias pro='vim /Users/anyaforger/Desktop/lf/subjects/Intern/process.md'
-alias rules='vim /Users/anyaforger/Desktop/lf/subjects/life/rules.md'
 # word and book aliases
 alias phr='vim ~/Desktop/lf/subjects/life/language/english/phrase.md'
 alias word='vim /Users/anyaforger/Desktop/lf/subjects/life/language/English/words.md'
 
-alias hack='vim ~/recreation/hack/res.md'
-alias bi='brew install'
-alias french='vim ~/Desktop/lf/subjects/life/language/French'
 alias pdf='img2pdf'
-alias npd='npx prisma migrate dev'
 alias p='python'
 
 
@@ -183,17 +82,12 @@ alias p='python'
 alias cr='cargo run'
 
 
-# Developer Servers
+# Development Based
 
 alias nd='npm run dev'
 alias pd='pnpm run dev'
 alias pat='pnpm add tailwindcss @tailwindcss/vite';
-
-
-
-
-
-
+alias npd='npx prisma migrate dev'
 
 
 alias stat='stat -x'
@@ -201,7 +95,7 @@ alias stat='stat -x'
 
 eval "$(zoxide init zsh)"
 eval "$(thefuck --alias)"
-eval "$(atuin init zsh)"
+# eval "$(atuin init zsh)"
 
 # python specific
 alias mig='python manage.py makemigrations; python manage.py migrate'
