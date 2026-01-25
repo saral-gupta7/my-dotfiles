@@ -1,5 +1,23 @@
-[flavor]
-use = "tokyo-night"
-# For Yazi 0.4 and above
-dark = "tokyo-night"
+# [flavor]
+# use = "tokyo-night"
+# # For Yazi 0.4 and above
+# dark = "tokyo-night"
+# j
+# [flavor]
+# dark = "rose-pine"
 
+# [flavor]
+# dark = "nord"
+
+# [flavor]
+# dark = "eldritch"
+
+# [flavor]
+# dark = "flexoki-dark"
+
+
+# [flavor]
+# dark = "ayu-dark"
+
+[flavor]
+dark = "catppuccin-mocha"

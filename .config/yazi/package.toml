@@ -1,104 +1,39 @@
 [[plugin.deps]]
-use = "yazi-rs/plugins:jump-to-char"
-rev = "9a09505"
-hash = "a670c03eb3760812e044a24f94cedc55"
-
-[[plugin.deps]]
-use = "yazi-rs/plugins:chmod"
-rev = "9a09505"
-hash = "2f1053f89d1a301a648ab181d0948e38"
-
-[[plugin.deps]]
-use = "gesellkammer/audio-preview"
-rev = "dba89bb"
-hash = "833ce7ca88b7b3399b21a55d43186a45"
-
-[[plugin.deps]]
-use = "Sonico98/exifaudio"
-rev = "7ff7141"
-hash = "666ccba55119fba4c25b8ad354b2855c"
-
-[[plugin.deps]]
-use = "Reledia/glow"
-rev = "2da96e3"
-hash = "f9ee1436e3b853508d87f7d49dce56e6"
-
-[[plugin.deps]]
-use = "stelcodes/bunny"
-rev = "a64f32a"
-hash = "22d9e6f72230be88ab322040626623a"
-
-[[plugin.deps]]
-use = "Rolv-Apneseth/starship"
-rev = "c070754"
-hash = "ebe49da58741aa3bf06c49ee394e0a5a"
-
-[[plugin.deps]]
-use = "yazi-rs/plugins:smart-filter"
-rev = "4b027c7"
-hash = "f0c4b41b5d19a3144958383333eff6e7"
-
-[[plugin.deps]]
-use = "dedukun/bookmarks"
-rev = "a70648a"
-hash = "b836fb264381f35dec79930438a906d5"
-
-[[plugin.deps]]
 use = "yazi-rs/plugins:full-border"
-rev = "4b027c7"
-hash = "1f3dad061209081a6b04dd6ff2cb06c7"
-
-[[plugin.deps]]
-use = "wylie102/duckdb"
-rev = "6259e2d"
-hash = "833314e2c2bd0de8d43ef2341cb0853b"
-
-[[plugin.deps]]
-use = "yazi-rs/plugins:toggle-pane"
-rev = "4b027c7"
-hash = "f3853bbdd1da2fad09d059ab5464abfd"
-
-[[flavor.deps]]
-use = "yazi-rs/flavors:catppuccin-mocha"
-rev = "4a3082f"
-hash = "228f8191fd4f8dbfcf70f9f87073718e"
-
-[[flavor.deps]]
-use = "PinThePenguine/sunset"
-rev = "181acd4"
-hash = "cc4c39af7098f02c42fec223fc1fc967"
-
-[[flavor.deps]]
-use = "yazi-rs/flavors:catppuccin-frappe"
-rev = "4a3082f"
-hash = "4f8a88c551975fd18664cf69ef8f6a7f"
-
-[[flavor.deps]]
-use = "ficcdaf/ashen:ashen"
-rev = "a17536c"
-hash = "e1ae4dbbbc24985970205810d8cf378e"
-
-[[flavor.deps]]
-use = "gosxrgxx/flexoki-dark"
-rev = "3e8cfba"
-hash = "56a96293138f09da7fae25ee405a4393"
-
-[[flavor.deps]]
-use = "kmlupreti/ayu-dark"
-rev = "5412a78"
-hash = "60690920e8c0f9f81ff02009de5d156f"
-
-[[flavor.deps]]
-use = "marcosvnmelo/kanagawa-dragon"
-rev = "2ddff30"
-hash = "c9e9fcf6b11c9fe63d4ac7c9408f628c"
-
-[[flavor.deps]]
-use = "dangooddd/kanagawa"
-rev = "31167ed"
-hash = "a04e157148549bacbb2831aab0e6e8cb"
+rev = "57f1863"
+hash = "3996fc74044bc44144b323686f887e1"
 
 [[flavor.deps]]
 use = "BennyOe/tokyo-night"
-rev = "695dac6"
-hash = "a8f426ea0d9cb843b081d62ab01364c8"
+rev = "8e6296f"
+hash = "d9da921c3bd37ba32ee27a8a7a40461f"
+
+[[flavor.deps]]
+use = "Mintass/rose-pine"
+rev = "8343340"
+hash = "d92db727dc16db9357f0dcda2758170c"
+
+[[flavor.deps]]
+use = "AdithyanA2005/nord"
+rev = "bdf0bd4"
+hash = "816970e00d643d3e8213b430d2148aec"
+
+[[flavor.deps]]
+use = "6ruby1/eldritch"
+rev = "7b5bf34"
+hash = "d73a2192b13f0267461d5424a7f10cd1"
+
+[[flavor.deps]]
+use = "gosxrgxx/flexoki-dark"
+rev = "28e1977"
+hash = "bc4620db89cf55bd91906c239f8fa1a8"
+
+[[flavor.deps]]
+use = "kmlupreti/ayu-dark"
+rev = "648a178"
+hash = "97124aae31cd2a5cae41c93f804996a5"
+
+[[flavor.deps]]
+use = "yazi-rs/flavors:catppuccin-mocha"
+rev = "4a1802a"
+hash = "b951d27afe197d154f6da9683b46c5f8"

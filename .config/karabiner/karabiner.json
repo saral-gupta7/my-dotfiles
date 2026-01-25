@@ -505,12 +505,12 @@
                         "description": "Hyper Key + v",
                         "manipulators": [
                             {
-                                "description": "Open https://vercel.com/saral-guptas-projects/min-website",
+                                "description": "Open https://vercel.com/saral-guptas-projects/",
                                 "from": {
                                     "key_code": "v",
                                     "modifiers": { "mandatory": ["left_command", "left_control", "left_shift", "left_option"] }
                                 },
-                                "to": [{ "shell_command": "open https://vercel.com/saral-guptas-projects/min-website" }],
+                                "to": [{ "shell_command": "open https://vercel.com/saral-guptas-projects/" }],
                                 "type": "basic"
                             }
                         ]
