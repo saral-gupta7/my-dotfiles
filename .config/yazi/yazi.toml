@@ -9,7 +9,7 @@ sort_reverse = false
 sort_sensitive = false
 
 [mgr]
-show_hidden = true
+show_hidden = false
 
 [opener]
 play = [
@@ -38,17 +38,46 @@ markdown = [
 
 [open]
 rules = [
+  # Images / media
+  { mime = "inode/empty", use = "edit" },
   { mime = "image/*", use = "image" },
   { mime = "video/*", use = "play" },
   { mime = "audio/*", use = "play" },
 
+  # PDF
   { mime = "application/pdf", use = "pdf" },
 
-  { mime = "text/markdown", use = "markdown" },
-  { name = "*.md", use = "markdown" },
+  # All source code & config files → Neovim
+  { name = "*.go",    use = "edit" },
+  { name = "*.lua",   use = "edit" },
+  { name = "*.rs",    use = "edit" },
+  { name = "*.py",    use = "edit" },
+  { name = "*.js",    use = "edit" },
+  { name = "*.ts",    use = "edit" },
+  { name = "*.jsx",   use = "edit" },
+  { name = "*.tsx",   use = "edit" },
+  { name = "*.java",  use = "edit" },
+  { name = "*.c",     use = "edit" },
+  { name = "*.cpp",   use = "edit" },
+  { name = "*.h",     use = "edit" },
+  { name = "*.sh",    use = "edit" },
+  { name = "*.zsh",   use = "edit" },
+  { name = "*.bash",  use = "edit" },
+  { name = "*.toml",  use = "edit" },
+  { name = "*.yaml",  use = "edit" },
+  { name = "*.yml",   use = "edit" },
+  { name = "*.json",  use = "edit" },
+  { name = "*.xml",   use = "edit" },
+  { name = "*.ini",   use = "edit" },
+  { name = "*.conf",  use = "edit" },
+  { name = "*.env",   use = "edit" },
+  { name = "*.md",    use = "edit" },
 
+  # Fallback: any text-like file → Neovim
   { mime = "text/*", use = "edit" },
+  { name = "*", use = "edit" },
 
+  # Affinity
   { name = "*.afdesign", use = "affinity" },
   { name = "*.afphoto",  use = "affinity" },
   { name = "*.afpub",    use = "affinity" },

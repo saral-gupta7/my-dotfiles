@@ -1,1 +1,7 @@
-raycast
+.config/raycast
+.git
+.gitignore
+README.md
+.stow-local-ignore
+.DS_Store
+.gitmodules

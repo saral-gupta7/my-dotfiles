@@ -139,22 +139,6 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "Open https://chatgpt.com",
-                                "from": {
-                                    "key_code": "c",
-                                    "modifiers": { "mandatory": ["any"] }
-                                },
-                                "to": [{ "shell_command": "open https://chatgpt.com" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_spacebar",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
                                 "description": "Open https://hotstar.com",
                                 "from": {
                                     "key_code": "h",
@@ -177,38 +161,6 @@
                                     "modifiers": { "mandatory": ["any"] }
                                 },
                                 "to": [{ "shell_command": "open https://netflix.com" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_spacebar",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "description": "Open https://www.google.com/search?q=ipl",
-                                "from": {
-                                    "key_code": "i",
-                                    "modifiers": { "mandatory": ["any"] }
-                                },
-                                "to": [{ "shell_command": "open https://www.google.com/search?q=ipl" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_spacebar",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "description": "Open https://monkeytype.com",
-                                "from": {
-                                    "key_code": "t",
-                                    "modifiers": { "mandatory": ["any"] }
-                                },
-                                "to": [{ "shell_command": "open https://monkeytype.com" }],
                                 "type": "basic"
                             }
                         ]
