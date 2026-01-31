@@ -9,9 +9,10 @@ export EDITOR="nvim"
 export VISUAL="nvim"
 
 export ZSH="$HOME/.oh-my-zsh"
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting web-search)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting you-should-use web-search)
 source $ZSH/oh-my-zsh.sh
 
+alias ff=fastfetch
 
 ############################################
 # 2. Language Runtimes & Package Managers
@@ -201,3 +202,7 @@ compinit -C
 
 export ANI_CLI_PLAYER="mpv"
 export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$HOMEBREW_PREFIX/opt/openssl@3 --with-readline-dir=$HOMEBREW_PREFIX/opt/readline --with-libyaml-dir=$HOMEBREW_PREFIX/opt/libyaml"
+ff
+
+# bun completions
+[ -s "/Users/anyaforger/.bun/_bun" ] && source "/Users/anyaforger/.bun/_bun"

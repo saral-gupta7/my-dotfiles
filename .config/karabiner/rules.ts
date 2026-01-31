@@ -66,19 +66,19 @@ const rules: KarabinerRules[] = [
     // // https://youtu.be/MCbEPylDEWU
     t: {
       i: open(
-        "btt://execute_assigned_actions_for_trigger/?uuid=983BC102-4CDC-45F9-8E9A-BE20D41DDE94"
+        "btt://execute_assigned_actions_for_trigger/?uuid=983BC102-4CDC-45F9-8E9A-BE20D41DDE94",
       ),
       //   // dotfiles-public
       o: open(
-        "btt://execute_assigned_actions_for_trigger/?uuid=FB2B98F0-D86C-4F11-993F-CBB9D5CACC56"
+        "btt://execute_assigned_actions_for_trigger/?uuid=FB2B98F0-D86C-4F11-993F-CBB9D5CACC56",
       ),
       //   // linkarzu.github.io
       p: open(
-        "btt://execute_assigned_actions_for_trigger/?uuid=2AB31796-3161-4D9D-9C22-533037B4D37A"
+        "btt://execute_assigned_actions_for_trigger/?uuid=2AB31796-3161-4D9D-9C22-533037B4D37A",
       ),
       //   // scripts
       semicolon: open(
-        "btt://execute_assigned_actions_for_trigger/?uuid=624BA3B2-B5D8-443E-A91D-CC97AA2C1891"
+        "btt://execute_assigned_actions_for_trigger/?uuid=624BA3B2-B5D8-443E-A91D-CC97AA2C1891",
       ),
       //   // containerdata
       //   p: open(
@@ -172,11 +172,16 @@ const rules: KarabinerRules[] = [
     //   h: open("raycast://extensions/mattisssa/spotify-player/search"),
     // },
 
+    c: {
+      h: open(
+        "btt://execute_assigned_actions_for_trigger/?uuid=351720FE-6657-4551-8D25-E4C732718B78",
+      ),
+    },
     x: {
       n: open("https://x.com/enigma_sx"),
       m: open("https://x.com/sixthstumpedge"),
     },
-    v: open("https://vercel.com/saral-guptas-projects/"),
+    // v: open("https://vercel.com/saral-guptas-projects/"),
 
     g: open("https://github.com"),
 
@@ -271,7 +276,7 @@ const rules: KarabinerRules[] = [
       },
       // BetterTouchTool, connect airpods via bluetooth
       n: open(
-        "btt://execute_assigned_actions_for_trigger/?uuid=9A1CFA49-416C-480E-9430-184D2DAEE1CA"
+        "btt://execute_assigned_actions_for_trigger/?uuid=9A1CFA49-416C-480E-9430-184D2DAEE1CA",
       ),
     },
 
@@ -279,25 +284,25 @@ const rules: KarabinerRules[] = [
     d: {
       // Select text from alacritty
       j: open(
-        "btt://execute_assigned_actions_for_trigger/?uuid=5A708885-4D65-465C-B87A-996BA6C23B86"
+        "btt://execute_assigned_actions_for_trigger/?uuid=5A708885-4D65-465C-B87A-996BA6C23B86",
       ),
       // Paste alacritty text and go down
       k: open(
-        "btt://execute_assigned_actions_for_trigger/?uuid=5AF2559D-E6C9-4665-8D06-2CAF35B1AB07"
+        "btt://execute_assigned_actions_for_trigger/?uuid=5AF2559D-E6C9-4665-8D06-2CAF35B1AB07",
       ),
       // Paste alacritty text and go up
       l: open(
         // This one is working great
         // paste alacritty go up LESS DELAY
-        "btt://execute_assigned_actions_for_trigger/?uuid=E46BB0D5-F67F-46D5-850C-197337EB26E3"
+        "btt://execute_assigned_actions_for_trigger/?uuid=E46BB0D5-F67F-46D5-850C-197337EB26E3",
       ),
       // Reboot router
       u: open(
-        "btt://execute_assigned_actions_for_trigger/?uuid=EA461EE0-4C15-4113-93B6-07C12086FF1F"
+        "btt://execute_assigned_actions_for_trigger/?uuid=EA461EE0-4C15-4113-93B6-07C12086FF1F",
       ),
       // Test ping
       hyphen: open(
-        "btt://execute_assigned_actions_for_trigger/?uuid=EADC365D-0747-4E8F-ACB6-79564FEF1410"
+        "btt://execute_assigned_actions_for_trigger/?uuid=EADC365D-0747-4E8F-ACB6-79564FEF1410",
       ),
     },
 
@@ -435,6 +440,6 @@ fs.writeFileSync(
       ],
     },
     null,
-    2
-  )
+    2,
+  ),
 );
