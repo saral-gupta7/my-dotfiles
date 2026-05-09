@@ -1,6 +1,7 @@
 ############################################
 # 1. Core Shell Behavior
 ############################################
+zmodload zsh/zprof
 
 set -o vi
 bindkey -M viins 'jk' vi-cmd-mode
@@ -10,9 +11,12 @@ export VISUAL="nvim"
 
 export ZSH="$HOME/.oh-my-zsh"
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting you-should-use web-search)
+# plugins=(git zsh-syntax-highlighting you-should-use web-search)
 source $ZSH/oh-my-zsh.sh
 
-alias ff=fastfetch
+if [[ -n "$TMUX" ]]; then
+  export TERM=screen-256color
+fi
 
 ############################################
 # 2. Language Runtimes & Package Managers
@@ -32,13 +36,24 @@ export PATH="/usr/local/go/bin:$GOPATH/bin:$HOME/.local/opt/go/bin:$PATH"
 # ASDF
 # export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 
-# rbenv (lazy init)
-eval "$(rbenv init - zsh)"
+rbenv() {
+  unfunction rbenv
+  eval "$(command rbenv init - zsh)"
+  rbenv "$@"
+}
 
-# NVM (lazy load)
-# export NVM_DIR="$HOME/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"
-#
+export NVM_DIR="$HOME/.nvm"
+
+# Lazy NVM: only loads when first invoked
+nvm() {
+  unfunction nvm node npm npx
+  [ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"
+  nvm "$@"
+}
+node() { nvm; node "$@" }
+npm()  { nvm; npm  "$@" }
+npx()  { nvm; npx  "$@" }
+
 # Delay heavy stuff
 autoload -Uz add-zsh-hook
 add-zsh-hook precmd _lazy_init
@@ -46,13 +61,17 @@ add-zsh-hook precmd _lazy_init
 _lazy_init() {
   add-zsh-hook -d precmd _lazy_init
   eval "$(starship init zsh)"
-  source "$NVM_DIR/nvm.sh"
 }
 
-# Conda (lazy hook, no auto-activate)
-__conda_setup="$('/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-[ $? -eq 0 ] && eval "$__conda_setup"
-unset __conda_setup
+if [ -f "$HOME/.conda_zsh_hook.zsh" ]; then
+  source "$HOME/.conda_zsh_hook.zsh"
+else
+  __conda_setup="$('/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2>/dev/null)"
+  if [ $? -eq 0 ]; then
+    echo "$__conda_setup" > "$HOME/.conda_zsh_hook.zsh"
+    eval "$__conda_setup"
+  fi
+fi
 
 # PNPM
 export PNPM_HOME="$HOME/Library/pnpm"
@@ -133,6 +152,8 @@ export PATH="$HOME/.console-ninja/.bin:$PATH"
 # 6. Aliases
 ############################################
 
+alias bd='bun run dev'
+alias sr='sketchybar --reload'
 alias stowd='cd ~/dotfiles && stow --adopt .'
 alias vim="nvim"
 alias python="python3"
@@ -163,7 +184,7 @@ alias cur='vim ~/Desktop/lf/curiosity.md'
 alias scp='f ~/scripts/'
 alias lsd='ls ~/Desktop/'
 alias ta='tmux attach'
-alias sem='f ~/Downloads/"6th sem"/'
+alias sem='f ~/Downloads/"6th sem"/updated-drive'
 alias gar='f ~/recreation/garbage/'
 alias life='vim ~/Desktop/lf/life/life.md'
 alias book='f ~/Desktop/lf/subjects/CS/Books/'
@@ -178,13 +199,30 @@ alias nd='npm run dev'
 alias pd='pnpm run dev'
 alias pat='pnpm add tailwindcss @tailwindcss/vite'
 alias npd='npx prisma migrate dev'
-alias fps='ffmpeg -i mute.mp4 -vsync 0 -q:v 1 -vf "fps=1" frms/frames_%04d.png'
 alias tl="pnpm add tailwindcss @tailwindcss/vite"
 alias stat='stat -x'
 alias onepiece='vim ~/Desktop/lf/WatchList/One-Piece-Arcs.md'
 alias mig='python manage.py makemigrations; python manage.py migrate'
 alias dps='docker ps'
 alias sshconfig='vim ~/.ssh/config'
+
+# docker aliases
+alias dcc='docker compose down'
+alias dcp='docker compose up -d --build'
+alias dpp='docker compose up -d'
+alias di='docker images'
+
+
+# kubernetes alias
+
+alias k='kubectl'
+alias kgp='kubectl get pods'
+alias kgr='kubectl get rs'
+alias kgd='kubectl get deployment'
+
+
+alias ur='uv run'
+alias urm='uv run python manage.py'
 
 
 ############################################
@@ -193,7 +231,14 @@ alias sshconfig='vim ~/.ssh/config'
 
 fpath+=~/.zfunc
 autoload -Uz compinit
-compinit -C
+
+# Only regenerate .zcompdump once per day
+if [[ -n "$HOME/.zcompdump"(#qN.mh+20) ]]; then
+  compinit
+else
+  compinit -C  # skip security check, use cache
+fi
+
 
 [[ -f "$HOME/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && source "$HOME/Library/Application Support/amazon-q/shell/zshrc.post.zsh"
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
@@ -202,7 +247,14 @@ compinit -C
 
 export ANI_CLI_PLAYER="mpv"
 export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$HOMEBREW_PREFIX/opt/openssl@3 --with-readline-dir=$HOMEBREW_PREFIX/opt/readline --with-libyaml-dir=$HOMEBREW_PREFIX/opt/libyaml"
-ff
 
 # bun completions
 [ -s "/Users/anyaforger/.bun/_bun" ] && source "/Users/anyaforger/.bun/_bun"
+
+
+mkd () {
+  mkdir -p "$1"
+  cd "$1"
+}
+
+[ -f "/Users/anyaforger/.ghcup/env" ] && . "/Users/anyaforger/.ghcup/env" # ghcup-env

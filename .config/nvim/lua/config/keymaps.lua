@@ -4,3 +4,6 @@
 local keymap = vim.keymap
 
 keymap.set("i", "jk", "<Esc>")
+
+keymap.set("n", "cw", "yiw", { desc = "Copy inside quotes" })
+keymap.set("n", "cp", '"_ci"<C-r>"<Esc>', { desc = "Replace inside double quotes with yanked" })

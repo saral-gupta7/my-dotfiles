@@ -47,3 +47,8 @@ hash = "97124aae31cd2a5cae41c93f804996a5"
 use = "yazi-rs/flavors:catppuccin-mocha"
 rev = "4a1802a"
 hash = "b951d27afe197d154f6da9683b46c5f8"
+
+[[flavor.deps]]
+use = "identityapproved/lain"
+rev = "f2fe379"
+hash = "8e584e7222223282f3555b7989082526"

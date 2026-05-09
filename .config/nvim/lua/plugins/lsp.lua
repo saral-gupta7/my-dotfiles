@@ -1,14 +1,16 @@
 return {
   "neovim/nvim-lspconfig",
   config = function()
-    local servers = { "ts_ls", "lua_ls", "pyright", "json_lsp" }
+    local lspconfig = require("lspconfig")
+
+    local servers = { "ts_ls", "lua_ls", "pyright", "jsonls", "clangd" }
 
     for _, server in ipairs(servers) do
-      vim.lsp.enable(server)
+      lspconfig[server].setup({})
     end
 
-    -- Setting up json_lsp for suggestions in tsconfig.json file.
-    require("lspconfig").jsonls.setup({
+    -- jsonls with schema support
+    lspconfig.jsonls.setup({
       settings = {
         json = {
           schemas = {

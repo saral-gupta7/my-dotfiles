@@ -1,6 +1,7 @@
 enable = true
-max_width = 6000
-max_height = 5500
+[preview]
+max_width = 1920
+max_height = 1440
 
 [manager]
 sort_by = "extension"
@@ -9,6 +10,10 @@ sort_sensitive = false
 
 [mgr]
 show_hidden = false
+
+# [[plugin.prepend_previewers]]
+# mime = "video/*"
+# run = "video-timeline"
 
 [opener]
 play = [

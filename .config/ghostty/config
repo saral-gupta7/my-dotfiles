@@ -1,6 +1,6 @@
-theme = vesper
-background-opacity = 0.95
-background-blur-radius = 30
+theme = TokyoNight Night
+background-opacity = 1
+background-blur-radius = 0
 
 font-family = JetBrainsMono Nerd Font
 
