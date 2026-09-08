@@ -3,7 +3,7 @@ return {
   config = function()
     local lspconfig = require("lspconfig")
 
-    local servers = { "ts_ls", "lua_ls", "pyright", "jsonls", "clangd" }
+    local servers = { "ts_ls", "lua_ls", "pyright", "jsonls", "clangd", "gopls", "jdtls" }
 
     for _, server in ipairs(servers) do
       lspconfig[server].setup({})

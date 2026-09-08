@@ -19,5 +19,8 @@
 # [flavor]
 # dark = "ayu-dark"
 
+# [flavor]
+# dark = "nord"
+
 [flavor]
-dark = "nord"
+dark = "vague"

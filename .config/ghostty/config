@@ -1,6 +1,6 @@
-theme = TokyoNight Night
+theme = Vague
 background-opacity = 1
-background-blur-radius = 0
+background-blur-radius = 2
 
 font-family = JetBrainsMono Nerd Font
 

@@ -1,3 +1,4 @@
+export TERM=xterm-256color
 ############################################
 # 1. Core Shell Behavior
 ############################################
@@ -14,9 +15,9 @@ plugins=(git zsh-autosuggestions zsh-syntax-highlighting you-should-use web-sear
 # plugins=(git zsh-syntax-highlighting you-should-use web-search)
 source $ZSH/oh-my-zsh.sh
 
-if [[ -n "$TMUX" ]]; then
-  export TERM=screen-256color
-fi
+# if [[ -n "$TMUX" ]]; then
+#   export TERM=xterm-256color
+# fi
 
 ############################################
 # 2. Language Runtimes & Package Managers
@@ -258,3 +259,26 @@ mkd () {
 }
 
 [ -f "/Users/anyaforger/.ghcup/env" ] && . "/Users/anyaforger/.ghcup/env" # ghcup-env
+
+# >>> juliaup initialize >>>
+
+# !! Contents within this block are managed by juliaup !!
+
+path=('/Users/anyaforger/.juliaup/bin' $path)
+export PATH
+# Tab completion for juliaup and julia channel selection
+[ -f "/Users/anyaforger/.julia/juliaup/completions/zsh.zsh" ] && source "/Users/anyaforger/.julia/juliaup/completions/zsh.zsh"
+
+# <<< juliaup initialize <<<
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+
+export SDKROOT=$(xcrun --sdk macosx --show-sdk-path)
+
+# pnpm
+export PNPM_HOME="/Users/anyaforger/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME/bin:"*) ;;
+  *) export PATH="$PNPM_HOME/bin:$PATH" ;;
+esac
+# pnpm end
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

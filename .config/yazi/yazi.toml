@@ -1,4 +1,5 @@
 enable = true
+
 [preview]
 max_width = 1920
 max_height = 1440
@@ -9,7 +10,8 @@ sort_reverse = false
 sort_sensitive = false
 
 [mgr]
-show_hidden = false
+show_hidden = true
+linemode = "size"
 
 # [[plugin.prepend_previewers]]
 # mime = "video/*"

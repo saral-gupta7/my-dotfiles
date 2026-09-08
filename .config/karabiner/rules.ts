@@ -61,20 +61,27 @@ const rules: KarabinerRules[] = [
       // hyper+3 - betterdisplay fav res 2
     },
 
-    v: {
-      h: open(
-        "btt://execute_assigned_actions_for_trigger/?uuid=351720FE-6657-4551-8D25-E4C732718B78",
-      ),
-
-      b: app("Sublime Text"),
-    },
+    // v: {
+    //   h: open(
+    //     "btt://execute_assigned_actions_for_trigger/?uuid=351720FE-6657-4551-8D25-E4C732718B78",
+    //   ),
+    //
+    //   b: app("Sublime Text"),
+    // },
     x: {
-      n: open("https://x.com/enigma_sx"),
-      m: open("https://x.com/sixthstumpedge"),
+      n: open(
+        "btt://execute_assigned_actions_for_trigger/?uuid=B66E8E94-8227-4078-A59D-BCFD5EA2B917",
+      ),
+      p: open(
+        "btt://execute_assigned_actions_for_trigger/?uuid=83DF9E9B-D6C6-419F-B560-1CF7DFE3BB44",
+      ),
+      m: open(
+        "btt://execute_assigned_actions_for_trigger/?uuid=C8C11936-AC91-45E5-B823-F57F5CE83D93",
+      ),
     },
     // v: open("https://vercel.com/saral-guptas-projects/"),
 
-    g: open("https://github.com"),
+    g: open("https://github.com/saral-gupta7"),
 
     // s = "System" or "Service"
     s: {
