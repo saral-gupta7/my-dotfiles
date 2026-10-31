@@ -10,7 +10,7 @@ sort_reverse = false
 sort_sensitive = false
 
 [mgr]
-show_hidden = true
+show_hidden = false
 linemode = "size"
 
 # [[plugin.prepend_previewers]]
